@@ -1,4 +1,4 @@
-package controller;
+package database.controller;
 
 public class DatabaseRunner 
 {
