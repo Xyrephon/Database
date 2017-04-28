@@ -1,9 +1,6 @@
 package database.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 /**
  * Created by Xyrephon on 4/18/2017.
@@ -12,7 +9,7 @@ import javax.persistence.ManyToOne;
 public class ContactInfo
 {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String contact_type;
     private String contact_info;

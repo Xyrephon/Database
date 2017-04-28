@@ -26,5 +26,6 @@
     </orderEntry>
     <orderEntry type="library" name="mysql:mysql-connector-java:5.1.29" level="project" />
     <orderEntry type="library" name="org.hibernate:hibernate-core:5.2.10.Final" level="project" />
+    <orderEntry type="library" name="com.intellij:forms_rt:7.0.3" level="project" />
   </component>
 </module>

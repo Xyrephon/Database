@@ -21,6 +21,11 @@ public class HibernateUtil {
         Configuration config = new Configuration();
         config.addAnnotatedClass(ContactInfo.class);
         config.addAnnotatedClass(Participant.class);
+        config.addAnnotatedClass(Survey.class);
+        config.addAnnotatedClass(Question.class);
+        config.addAnnotatedClass(Answer.class);
+        config.addAnnotatedClass(TakenSurvey.class);
+        config.addAnnotatedClass(MultipleChoiceQuestion.class);
         Properties props = config.getProperties();
         props.setProperty("hibernate.connection.driver_class", "com.mysql.jdbc.Driver");
         props.setProperty("hibernate.connection.url", "jdbc:mysql://localhost/survey?zeroDateTimeBehaviour=convertToNull");

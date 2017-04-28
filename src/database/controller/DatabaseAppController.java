@@ -1,7 +1,6 @@
 package database.controller;
 
-import database.view.DataFrame;  
-public class DatabaseAppController 
+public class DatabaseAppController
 {
 //	private DataFrame appFrame;
 //	private DatabaseController dataController;

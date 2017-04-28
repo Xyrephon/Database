@@ -13,12 +13,12 @@ import java.util.List;
 public class Participant
 {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String first_name;
     private String last_name;
     @Temporal(TemporalType.DATE)
-    private LocalDate age;
+    private Date age;
     @Enumerated(EnumType.STRING)
     private Gender gender;
     @OneToMany(mappedBy = "participant")
@@ -42,6 +42,16 @@ public class Participant
             @JoinColumn(name="child_id", referencedColumnName = "id")
     )
     private List<Participant> children;
+    @OneToMany(mappedBy = "participant")
+    private List<TakenSurvey> takenSurveys;
+
+    public List<TakenSurvey> getTakenSurveys() {
+        return takenSurveys;
+    }
+
+    public void setTakenSurveys(List<TakenSurvey> takenSurveys) {
+        this.takenSurveys = takenSurveys;
+    }
 
     public String toString()
     {
@@ -100,11 +110,11 @@ public class Participant
         this.children = children;
     }
 
-    public LocalDate getAge() {
+    public Date getAge() {
         return age;
     }
 
-    public void setAge(LocalDate age) {
+    public void setAge(Date age) {
         this.age = age;
     }
 }
